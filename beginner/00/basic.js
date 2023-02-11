@@ -1,15 +1,15 @@
-var Customer = /** @class */ (function () {
-    function Customer(name) {
+"use strict";
+class Customer {
+    constructor(name) {
         this.name = name;
     }
-    Customer.prototype.announce = function () {
+    announce() {
         return "Hello, my name is " + this.name;
-    };
-    return Customer;
-}());
+    }
+}
 // create a new instance
-var firstCustomer = new Customer("Alice");
-var newMessage = firstCustomer.announce();
+let firstCustomer = new Customer("Alice");
+let newMessage = firstCustomer.announce();
 // change the heading
-var webHeading = document.querySelector('h1');
+let webHeading = document.querySelector('h1');
 webHeading.textContent = newMessage;
