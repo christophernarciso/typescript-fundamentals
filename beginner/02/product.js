@@ -1,4 +1,6 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Product = void 0;
 class Product {
     constructor(name, desc, url, inStock) {
         this.name = name;
@@ -6,6 +8,7 @@ class Product {
         this.url = url;
         this.inStock = inStock;
     }
+    // can use protected / private 
     display() {
         return `
         "product": {
@@ -16,3 +19,6 @@ class Product {
         }`;
     }
 }
+exports.Product = Product;
+let newProduct = new Product("Orange T-Shirt", "A colorful t-shirt", "someUrl", false);
+newProduct.display();
